@@ -1,0 +1,11 @@
+<div class="content-container">
+  <navbar [title]="title"></navbar>
+  <div class="row content">
+    <div class="col-3 scroll">
+      <dogs-list [dogs]="dogs" [selected]="selected" (dogClicked)="dogSelected($event)"></dogs-list>
+    </div>
+    <div class="col-9 scroll">
+      <gallery [images]="images"></gallery>
+    </div>
+  </div>
+</div>

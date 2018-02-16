@@ -1,0 +1,10 @@
+.content-container{
+    height: 100vh;
+    overflow: hidden;
+}
+.content{
+    height:calc(100% - 56px);
+}
+.scroll{
+    overflow: auto;
+}
