@@ -1,3 +1,3 @@
 <ul class="list-group">
-    <li *ngFor="let dog of dogs;" [ngClass]="{'active':isSelected(dog)}" class="list-group-item" (click)="clicked(dog)">{{dog}}</li>
+    <li *ngFor="let dog of dogs;" [class.active]="isSelected(dog)" class="list-group-item" (click)="clicked(dog)">{{dog}}</li>
 </ul>
