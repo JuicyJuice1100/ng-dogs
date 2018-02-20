@@ -1,11 +1,16 @@
+{{datetime}}
 <div class="content-container">
-  <navbar [title]="title"></navbar>
+  <navbar [title]="title" (filterTyped)="filterDogsList($event)">
+    <h4 class="time-display">{{counter|async}}</h4>
+  </navbar>
+
   <div class="row content">
     <div class="col-3 scroll">
       <dogs-list [dogs]="dogs" [selected]="selected" (dogClicked)="dogSelected($event)"></dogs-list>
     </div>
     <div class="col-9 scroll">
-      <gallery [images]="images"></gallery>
+      <gallery [images]="images" [selected]="selected" [busy]="dogSvc.fetchingImages">
+      </gallery>
     </div>
   </div>
 </div>

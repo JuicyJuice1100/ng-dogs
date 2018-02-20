@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'navbar',
@@ -7,5 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class Navbar {
     @Input() title: String;
+    @Output() filterTyped = new EventEmitter<String>();
 
+    filterTypedHandler(value) {
+        this.filterTyped.emit(value);
+    }
 }

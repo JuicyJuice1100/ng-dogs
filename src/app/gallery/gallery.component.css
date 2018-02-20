@@ -1,4 +1,5 @@
 .card{
     width:250px;
     float:left;
+    transition: all .1s;
 }

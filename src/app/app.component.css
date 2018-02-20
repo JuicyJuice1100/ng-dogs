@@ -8,3 +8,15 @@
 .scroll{
     overflow: auto;
 }
+
+.time-display{
+    position: absolute;
+    right: 10px;
+    color: cadetblue;
+    display:none;
+}
+@media(min-width:768px) and (orientation:landscape){
+    .time-display{
+        display:block;
+    }  
+}

@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class Gallery {
     @Input() images: String[];
+    @Input() busy: boolean;
+    @Input() selected: String;
 }

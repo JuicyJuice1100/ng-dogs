@@ -1,3 +1,4 @@
 <ul class="list-group">
-    <li *ngFor="let dog of dogs;" [class.active]="isSelected(dog)" class="list-group-item" (click)="clicked(dog)">{{dog}}</li>
+    <li *ngFor="let dog of dogs;trackBy:dog" [class.active]="isSelected(dog)" class="list-group-item" (click)="clicked(dog)"
+        blue-color>{{dog|uppercase}}</li>
 </ul>
